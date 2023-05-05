@@ -1,12 +1,12 @@
 #!/bin/bash
 set -e
 
-handle_error () {
-    echo "Error occurred in script at line: ${1}"
-    echo "Exiting..."
-    exit 1
-}
-trap 'handle_error $LINENO' ERR
+# handle_error () {
+#     echo "Error occurred in script at line: ${1}"
+#     echo "Exiting..."
+#     exit 1
+# }
+# trap 'handle_error $LINENO' ERR
 
 # 安装zsh
 echo "安装zsh"
