@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-function handle_error {
+handle_error () {
     echo "Error occurred in script at line: ${1}"
     echo "Exiting..."
     exit 1
