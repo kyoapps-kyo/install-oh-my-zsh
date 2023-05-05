@@ -1,4 +1,13 @@
 #!/bin/bash
+set -e
+
+function handle_error {
+    echo "Error occurred in script at line: ${1}"
+    echo "Exiting..."
+    exit 1
+}
+trap 'handle_error $LINENO' ERR
+
 # 安装zsh
 echo "安装zsh"
 sudo apt-get install -y zsh curl
@@ -22,3 +31,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 echo "source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
  # 重新加载zsh配置文件
 source ~/.zshrc
+
