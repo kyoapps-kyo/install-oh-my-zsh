@@ -42,4 +42,4 @@ else
 fi
 
  # 重新加载zsh配置文件
-source ~/.zshrc
+. ~/.zshrc
