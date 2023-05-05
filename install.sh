@@ -4,8 +4,6 @@ set -e
 CURRENT_DIR=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 source ${CURRENT_DIR}/common/variables.sh
 
-echo -e "${RED}This text is red.${RESET}"
-
 # handle_error () {
 #     echo "Error occurred in script at line: ${1}"
 #     echo "Exiting..."
@@ -25,7 +23,7 @@ echo -e "${RED}This text is red.${RESET}"
 # # 设置zsh为默认shell
 # chsh -s $(which zsh)
 
-echo "安装autosuggestions && highlighting插件"
+echo -e "${GREEN}安装autosuggestions && highlighting插件${RESET}"
 
 if [ -d ~/.oh-my-zsh/plugins/zsh-autosuggestions ]; then
     echo "zsh-autosuggestions exists."
