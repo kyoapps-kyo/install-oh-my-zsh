@@ -1,9 +1,10 @@
 #!/bin/bash
 set -e
 
-. ./common/anis.sh
+CURRENT_DIR=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+source ${CURRENT_DIR}/../common/common.sh
 
-echo echo -e "${RED}This text is red.${RESET}"
+[ $(id -u) != "0" ] && { ansi -n --bold --bg-red "请用 root 账户执行本脚本"; exit 1; }
 
 # handle_error () {
 #     echo "Error occurred in script at line: ${1}"
