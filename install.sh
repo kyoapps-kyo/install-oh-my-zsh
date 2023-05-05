@@ -2,7 +2,7 @@
 set -e
 
 CURRENT_DIR=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-source ${CURRENT_DIR}/../common/common.sh
+source ${CURRENT_DIR}/common/common.sh
 
 [ $(id -u) != "0" ] && { ansi -n --bold --bg-red "请用 root 账户执行本脚本"; exit 1; }
 
