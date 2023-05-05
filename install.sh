@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+source ./common/anis.sh
+
+echo echo -e "${RED}This text is red.${RESET}"
+
 # handle_error () {
 #     echo "Error occurred in script at line: ${1}"
 #     echo "Exiting..."
