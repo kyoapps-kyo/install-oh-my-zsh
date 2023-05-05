@@ -8,17 +8,17 @@ set -e
 # }
 # trap 'handle_error $LINENO' ERR
 
-# 安装zsh
-echo "安装zsh"
-sudo apt-get install -y zsh curl
+# # 安装zsh
+# echo "安装zsh"
+# sudo apt-get install -y zsh curl
 
-echo "安装oh-my-zsh"
-# 安装oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# echo "安装oh-my-zsh"
+# # 安装oh-my-zsh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "设置zsh为默认shell"
-# 设置zsh为默认shell
-chsh -s $(which zsh)
+# echo "设置zsh为默认shell"
+# # 设置zsh为默认shell
+# chsh -s $(which zsh)
 
 echo "安装autosuggestions && highlighting插件"
 # 安装zsh-autosuggestions插件
