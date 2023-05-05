@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-source ./common/anis.sh
+. ./common/anis.sh
 
 echo echo -e "${RED}This text is red.${RESET}"
 
@@ -46,4 +46,4 @@ else
 fi
 
  # 重新加载zsh配置文件
-. ~/.zshrc
+echo "请执行source ~/.zshrc"
