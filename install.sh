@@ -1,7 +1,7 @@
 #!/bin/bash
 # 安装zsh
 echo "安装zsh"
-sudo apt-get install -y zsh
+sudo apt-get install -y zsh curl
 
 echo "安装oh-my-zsh"
 # 安装oh-my-zsh
