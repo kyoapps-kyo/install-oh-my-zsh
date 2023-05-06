@@ -4,23 +4,21 @@ set -e
 CURRENT_DIR=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 source ${CURRENT_DIR}/common/variables.sh
 
-# handle_error () {
-#     echo "Error occurred in script at line: ${1}"
-#     echo "Exiting..."
-#     exit 1
-# }
-# trap 'handle_error $LINENO' ERR
+# 安装zsh
+echo -e "${GREEN}安装zsh......${RESET} /n"
+sudo apt-get install -y zsh curl
 
-# # 安装zsh
-# echo "安装zsh"
-# sudo apt-get install -y zsh curl
+if [ -d ~/.oh-my-zsh ]; then
+    echo -e "${RED}oh-my-zsh 已经存在......${RESET} /n"
+else
+    echo -e "${GREEN}安装oh-my-zsh......${RESET} /n"
+    # 安装oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
-# echo "安装oh-my-zsh"
-# # 安装oh-my-zsh
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # echo "设置zsh为默认shell"
-# # 设置zsh为默认shell
+# 设置zsh为默认shell
 # chsh -s $(which zsh)
 
 echo -e "${GREEN}安装autosuggestions && highlighting插件${RESET}"
